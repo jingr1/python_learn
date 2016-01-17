@@ -5,11 +5,11 @@
 
 __author__ = 'kz9hxb'
 '''
-���õĵ�������:
-MySQL��������mysql-connector-python
-���ڿ�ѧ�����NumPy�⣺numpy
-���������ı���ģ�幤��:Jinja2
-����ͼ��Ĺ��߿�:pillow
+常用第三方库还有：
+MySQL的驱动：mysql-connector-python
+用于科学计算的NumPy库：numpy
+用于生成文本的模板工具Jinja2
+处理图像的工具库： Pillow
 '''
 import sys
 from PIL import Image
