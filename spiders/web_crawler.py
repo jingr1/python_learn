@@ -25,6 +25,7 @@ import os
 
 # The function output order does not affect grading.
 
+
 def get_page(url):
     try:
         if url == "http://www.udacity.com/cs101x/index.html":
@@ -51,6 +52,7 @@ def get_page(url):
         return ""
     return ""
 
+
 def get_next_target(page):
     start_link = page.find('<a href=')
     if start_link == -1:
@@ -60,10 +62,12 @@ def get_next_target(page):
     url = page[start_quote + 1:end_quote]
     return url, end_quote
 
+
 def union(p,q):
     for e in q:
         if e not in p:
             p.append(e)
+
 
 def get_all_links(page):
     links = []
@@ -75,6 +79,7 @@ def get_all_links(page):
         else:
             break
     return links
+
 
 def crawl_web(seed, max_pages):
     tocrawl = [seed]
@@ -117,6 +122,8 @@ def crawl_web(seed, max_pages):
 # also include all pages that are linked to by these pages.
 #
 # Note that the pages in the crawl may be in any order.
+
+
 def get_page(url):
     try:
         if url == "http://www.udacity.com/cs101x/index.html":
@@ -192,7 +199,7 @@ def crawl_web(seed,max_depth):
 #>>> 'http://www.udacity.com/cs101x/walking.html',
 #>>> 'http://www.udacity.com/cs101x/crawling.html']
 
-#print crawl_web("http://www.udacity.com/cs101x/index.html",50)
+# print crawl_web("http://www.udacity.com/cs101x/index.html",50)
 #>>> ['http://www.udacity.com/cs101x/index.html',
 #>>> 'http://www.udacity.com/cs101x/flying.html',
 #>>> 'http://www.udacity.com/cs101x/walking.html',
